@@ -1,0 +1,279 @@
+/* =============================================================================
+   Containers/Elements
+   ========================================================================== */
+//Inline Container
+.container-inline { label, input { display: inline-block; vertical-align: top; margin: 0px; } }
+
+//Invisible Elements
+.element-invisible { display: none; }
+
+
+
+/* =============================================================================
+   Links/Menus/Pagers/Navigation
+   ========================================================================== */
+//Tabs
+.nav.nav-tabs { margin-bottom: 20px; }
+
+// Vertical Tabs
+.vertical-tabs fieldset.vertical-tabs-pane { padding: 20px 40px; }
+
+//Compact Link
+.compact-link { margin: 0 0 0.5em 0; }
+
+// Inline Links
+ul.inline {
+  padding: 0;
+  li { display: inline-block; margin-right: 5px; }
+}
+
+//Quick inline Admin links
+small .admin-link {
+  &:before { content: '['; }
+  &:after { content: ']'; }
+}
+
+//Action Links
+ul.action-links {
+  padding: 0;
+  li { list-style: none; }
+  li a {
+    line-height: 30px;
+    color: @link-color;
+    text-decoration: none;
+    &:before { .icomoon-icon; content: "\e675"; margin-right: 4px; }
+  }
+}
+
+//More link
+.more-link, .more-help-link { text-align: right; }
+.more-help-link a {
+  padding: 1px 0 1px 20px;
+  &:before { .icomoon-icon; content: "\e6b5"; margin-right: 4px; }
+}
+
+// Pager
+.item-list ul li { margin: 0px; }
+
+
+/* =============================================================================
+   Forms/inputs/operations
+   ========================================================================== */
+// Autocomplete Field
+html.js {
+  input.form-autocomplete, input.throbbing {
+    background-image: url(../img/throbber.gif)!important;
+    background-position: -40px!important;
+    background-repeat: no-repeat!important;
+  }
+}
+#autocomplete {
+  z-index: 9999;
+  background-color: #fff;
+  border: 1px solid #333333;
+  border-top: 0px solid;
+}
+.reference-autocomplete { padding: 4px; }
+#autocomplete li { margin-left: 0px; padding-left: 20px; }
+#autocomplete li:hover {
+  background: #333333;
+  color: #fff;
+  cursor: pointer;
+}
+
+// Exposed Filters
+.exposed-filters .filters { padding: 20px; }
+
+// Forms
+.form-actions input.btn { margin: 5px; }
+.radio input[type="radio"], .checkbox input[type="checkbox"] { margin-left: 0px; }
+.field-formatter-settings-edit { width: auto; }
+.description, .help-block { font-size: 80%; }
+.form-item-operation { margin-bottom: 20px!important; }
+
+// Removing the "grippie" from forms.
+.grippie { display: none }
+
+// Comment Forms
+#comment-form { padding: 10px; margin-top: 10px; }
+.submitted { font-size: 80% }
+#edit-comment-body-und-0-format { display: none } //Removing text format selecter from comment form.
+#comments { margin-top: 30px }
+.comment { background: #fff; padding: 10px; margin-top: 10px; }
+.comment-unpublished { background-color: #fff4f4 }
+.comment-preview { background-color: #ffffea }
+.comment-form .form-submit {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 5px;
+}
+
+// Content management interface
+#edit-options { margin-bottom: 20px; }
+
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+// Fieldsets
+html.js fieldset.collapsed { height: auto; }
+
+// Tables
+table {
+  &.table td.checkbox input[type="checkbox"] { margin-left: 0px; }
+  &#blocks { width: 100%; select { margin: 10px 0 0 0; } }
+}
+
+//Table Drag
+tr.drag { background-color: #fffff0; }
+tr.drag-previous { background-color: #ffd; }
+.tabledrag-toggle-weight { font-size: 0.9em; }
+body div.tabledrag-changed-warning { margin-bottom: 0.5em; }
+
+tr.draggable {
+  a.tabledrag-handle {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    &:before { .icomoon-icon; content: "\e6e1"; cursor: all-scroll; }
+    .handle { display: none; }
+  }
+  h4 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+//Table Select
+tr.selected td { background: #ffc; }
+
+
+
+/* =============================================================================
+   Administration
+   ========================================================================== */
+// Admin Panel
+div.admin-panel {
+  margin: 0;
+  padding: 5px 5px 15px 5px;
+  .well;
+
+  .description { margin: 0 0 3px; padding: 2px 0 3px 0; }
+  .body { padding: 0 4px 2px 8px; }
+  .expert-link {
+    text-align: right;
+    margin-right: 1em;
+    padding-right: 4px;
+  }
+}
+.admin {
+  .left {
+    float: left;
+    width: 49%;
+  }
+  .right {
+    float: right!important;
+    width: 49%;
+  }
+}
+#system-themes-page h2 { font-weight: normal; text-transform: uppercase; }
+.theme-selector h3 { font-weight: normal; }
+.theme-default h3 { font-weight: bold; }
+.system-themes-list-enabled .theme-selector h3 { margin-top: 0; }
+
+
+// Admin List
+dl.admin-list dt a,
+dl.node-type-list dt a { font-weight: 800; }
+.admin-list dd { margin-bottom: 10px; }
+
+// Overlay
+#overlay-tabs {
+  margin: -35px 0 0 0;
+  li {
+    a, a:active, a:visited, a:hover,
+    &.active a, &.active a.active, &.active a:active, &.active a:visited {padding: 5px 16px 3px 16px;}
+  }
+}
+#overlay-titlebar {margin-top: 30px;}
+
+//Modules Page
+#system-modules {
+  table td { vertical-align: middle; }
+  div.incompatible { font-weight: bold; }
+  div.admin-requirements, div.admin-required { font-size: 0.9em; color: @gray; }
+  span.admin-disabled { color: @brand-warning; }
+  span.admin-enabled { color: @brand-success; }
+  span.admin-missing { color: @brand-danger; }
+  a.module-link { display: block; padding: 1px 0 1px 20px; white-space: nowrap; }
+  a.module-link-help:before { .icomoon-icon; content: "\e6b5"; margin-right: 4px; }
+  a.module-link-permissions:before { .icomoon-icon; content: "\e6ca"; margin-right: 4px; }
+  a.module-link-configure:before { .icomoon-icon; content: "\e68b"; margin-right: 4px; }
+  .module-help { margin-left: 1em; float: right; }
+}
+
+
+//Status Report
+table.system-status-report {
+  td { padding: 6px; vertical-align: middle; }
+  tr.merge-up td { padding: 0 6px 8px 28px; }
+  td.status-icon { width: 16px; padding-right: 0; }
+  td.status-icon div { background-repeat: no-repeat; height: 16px; width: 16px; }
+  tr.error td.status-icon div { .icomoon-icon; content: "\e6bd"; margin-right: 4px; color: @brand-danger; }
+  tr.warning td.status-icon div { .icomoon-icon; content: "\e657"; margin-right: 4px; color: @brand-warning; }
+  tr.merge-down, tr.merge-down td { border-bottom-width: 0 !important; }
+  tr.merge-up, tr.merge-up td { border-top-width: 0 !important; }
+}
+
+//Theme Settings
+.theme-settings-left { float: left; width: 49%; }
+.theme-settings-right { float: right; width: 49%; }
+.theme-settings-bottom { clear: both; }
+
+//Appearance Page
+table.screenshot { margin-right: 1em; }
+.theme-info {
+  h2 { margin-bottom: 0; }
+  p { margin-top: 0; }
+}
+.system-themes-list { margin-bottom: 20px; h2 { margin: 0; }}
+.system-themes-list-disabled { border-top: 1px solid @gray; padding-top: 20px; }
+
+.theme-selector {
+  padding-top: 20px;
+  .screenshot, .theme-selector .no-screenshot {
+    border: 1px solid #e0e0d8;
+    padding: 2px;
+    vertical-align: bottom;
+    width: 294px;
+    height: 219px;
+    line-height: 219px;
+    text-align: center;
+  }
+  .screenshot { border: 1px solid #aaa; }
+  h3 { font-weight: normal; }
+}
+.system-themes-list-enabled .theme-selector .screenshot,
+.system-themes-list-enabled .theme-selector .no-screenshot { float: left; margin: 0 20px 0 0; }
+.system-themes-list-disabled .theme-selector .screenshot,
+.system-themes-list-disabled .theme-selector .no-screenshot { width: 194px; height: 144px; line-height: 144px; }
+.theme-default h3 { font-weight: bold; }
+.system-themes-list-enabled .theme-selector h3 { margin-top: 0; }
+.system-themes-list-disabled .theme-selector { width: 300px; float: left; padding: 20px 20px 20px 0; }
+.system-themes-list-enabled .theme-info { max-width: 940px; }
+.system-themes-list-disabled .theme-info { min-height: 170px; }
+.theme-selector .incompatible { margin-top: 10px; font-weight: bold; }
+.theme-selector .operations { margin: 10px 0 0 0; padding: 0; }
+.theme-selector .operations li {
+  float: left;
+  margin: 0;
+  padding: 0 0.7em;
+  list-style-type: none;
+  border-right: 1px solid #cdcdcd;
+}
+.theme-selector .operations li.last { padding: 0 0 0 0.7em; border-right: none; }
+.theme-selector .operations li.first { padding: 0 0.7em 0 0; }
+#system-themes-admin-form { clear: left; }
+
